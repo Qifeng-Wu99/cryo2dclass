@@ -1,0 +1,10 @@
+# TODO: fill in authors and the paper reference before the public release.
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "cryo2dclass: unsupervised 2D classification of cryo-EM/ET particles"
+type: software
+authors:
+  - name: "Xu Lab, Carnegie Mellon University"
+license: MIT
+version: 0.1.0
+repository-code: "https://github.com/xulabs/cryo2dclass"

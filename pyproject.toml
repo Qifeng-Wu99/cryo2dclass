@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cryo2dclass"
+version = "0.1.0"
+description = "Unsupervised 2D classification of cryo-EM/ET particles with a rotation-invariant autoencoder and built-in pose search"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Xu Lab, Carnegie Mellon University" }]
+requires-python = ">=3.9"
+keywords = ["cryo-EM", "cryo-ET", "2D classification", "autoencoder", "unsupervised learning"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Image Processing",
+]
+dependencies = [
+    "torch>=2.0",
+    "accelerate>=0.20",
+    "numpy",
+    "scipy",
+    "scikit-learn>=1.2",
+    "matplotlib",
+    "mrcfile",
+    "pyyaml",
+    "tqdm",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+cryo2dclass = "cryo2dclass.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/xulabs/cryo2dclass"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+src = ["src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "I"]

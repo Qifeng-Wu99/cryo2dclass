@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.venv/
+venv/
+
+# Data and results (keep large files out of git)
+runs/
+toy_data/
+*.mrc
+*.mrcs
+*.st
+*.npy
+*.pt
+*.pth
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+*.ipynb_checkpoints
